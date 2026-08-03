@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TaSain Thomas — AI Engineer specializing in production-grade LLM systems, MLOps, and adversarial robustness.">
+  <meta name="author" content="TaSain Thomas">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="TaSain Thomas — AI Engineer">
+  <meta property="og:description" content="AI Engineer who ships production-grade LLM systems. Kubernetes, VLM fine-tuning, red-teaming, full-stack.">
+  <meta property="og:type" content="website">
+  <title>TaSain Thomas — AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #171717;
+      --white: #ffffff;
+      --gray-50: #fafafa;
+      --gray-100: #ebebeb;
+      --gray-400: #808080;
+      --gray-500: #666666;
+      --gray-600: #4d4d4d;
+      --blue: #0072f5;
+      --blue-bg: #ebf5ff;
+      --blue-text: #0068d6;
+      --focus: hsla(212, 100%, 48%, 1);
+      --shadow-border: 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+      --shadow-card: rgba(0,0,0,0.08) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 2px, rgba(0,0,0,0.04) 0px 8px 8px -8px, #fafafa 0px 0px 0px 1px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      font-feature-settings: 'liga' 1;
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ---- NAV ---- */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 24px; height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 14px; font-weight: 600;
+      letter-spacing: -0.32px; color: var(--black);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a {
+      font-size: 14px; font-weight: 500; color: var(--gray-600);
+      text-decoration: none; transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--black); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--black); color: var(--white);
+      padding: 6px 14px; border-radius: 6px;
+      font-size: 14px; font-weight: 500; text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* ---- HERO ---- */
+    .hero {
+      max-width: 1200px; margin: 0 auto;
+      padding: 120px 24px 80px; text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--blue-bg); color: var(--blue-text);
+      padding: 3px 12px; border-radius: 9999px;
+      font-size: 12px; font-weight: 500; margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 600; line-height: 1.08;
+      letter-spacing: -2.4px; color: var(--black);
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--gray-400); }
+    .hero .subtitle {
+      font-size: 20px; font-weight: 400;
+      line-height: 1.6; color: var(--gray-600);
+      max-width: 680px; margin: 0 auto 32px;
+    }
+    .hero-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--black); color: var(--white);
+      padding: 10px 22px; border-radius: 6px;
+      font-size: 14px; font-weight: 500;
+      text-decoration: none; transition: opacity 0.15s;
+      border: none; cursor: pointer; font-family: inherit;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--white); color: var(--black);
+      padding: 10px 22px; border-radius: 6px;
+      font-size: 14px; font-weight: 500;
+      text-decoration: none; transition: background 0.15s;
+      box-shadow: var(--shadow-border);
+      border: none; cursor: pointer; font-family: inherit;
+    }
+    .btn-secondary:hover { background: var(--gray-50); }
+
+    /* ---- SECTION ---- */
+    section { max-width: 1200px; margin: 0 auto; padding: 80px 24px; }
+    .section-label {
+      font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px; font-weight: 500; text-transform: uppercase;
+      color: var(--gray-500); letter-spacing: 0.5px; margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 600; letter-spacing: -1.28px;
+      color: var(--black); margin-bottom: 16px;
+    }
+    .section-desc {
+      font-size: 18px; color: var(--gray-600);
+      max-width: 600px; line-height: 1.6;
+    }
+
+    /* ---- SKILLS ---- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px; margin-top: 40px;
+    }
+    .skill-card {
+      padding: 24px; border-radius: 8px;
+      box-shadow: var(--shadow-card); background: var(--white);
+    }
+    .skill-card h3 {
+      font-size: 16px; font-weight: 600; letter-spacing: -0.32px;
+      color: var(--black); margin-bottom: 12px;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tag {
+      font-size: 12px; font-weight: 500; color: var(--gray-600);
+      background: var(--gray-50); padding: 3px 10px;
+      border-radius: 9999px; box-shadow: var(--shadow-border);
+    }
+
+    /* ---- PROJECTS ---- */
+    .projects-list { display: flex; flex-direction: column; gap: 24px; margin-top: 40px; }
+    .project-card {
+      padding: 28px; border-radius: 8px;
+      box-shadow: var(--shadow-card); background: var(--white);
+      transition: box-shadow 0.2s;
+    }
+    .project-card:hover { box-shadow: rgba(0,0,0,0.12) 0px 0px 0px 1px, rgba(0,0,0,0.06) 0px 2px 4px; }
+    .project-card .meta {
+      font-family: 'Geist Mono', monospace; font-size: 12px;
+      color: var(--gray-500); margin-bottom: 8px;
+    }
+    .project-card h3 {
+      font-size: 24px; font-weight: 600; letter-spacing: -0.96px;
+      color: var(--black); margin-bottom: 8px;
+    }
+    .project-card p {
+      font-size: 16px; color: var(--gray-600); line-height: 1.6;
+    }
+    .project-card .highlights { margin-top: 16px; }
+    .project-card .highlights li {
+      font-size: 15px; color: var(--gray-600); line-height: 1.6;
+      margin-bottom: 6px; list-style: none; position: relative; padding-left: 16px;
+    }
+    .project-card .highlights li::before {
+      content: '—'; position: absolute; left: 0; color: var(--gray-400);
+    }
+
+    /* ---- EXPERIENCE ---- */
+    .timeline { display: flex; flex-direction: column; gap: 28px; margin-top: 40px; }
+    .timeline-item { display: flex; gap: 20px; }
+    .timeline-dot {
+      flex-shrink: 0; width: 32px; height: 32px;
+      border-radius: 50%; background: var(--black);
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .timeline-dot::after {
+      content: ''; width: 8px; height: 8px;
+      background: var(--white); border-radius: 50%;
+    }
+    .timeline-content { flex: 1; padding-bottom: 28px; border-bottom: 1px solid var(--gray-100); }
+    .timeline-item:last-child .timeline-content { border-bottom: none; padding-bottom: 0; }
+    .timeline-content .role {
+      font-size: 20px; font-weight: 600; letter-spacing: -0.96px;
+      color: var(--black);
+    }
+    .timeline-content .company {
+      font-size: 14px; color: var(--gray-500); margin-bottom: 4px;
+    }
+    .timeline-content .date {
+      font-family: 'Geist Mono', monospace; font-size: 12px;
+      color: var(--gray-400); margin-bottom: 12px;
+    }
+    .timeline-content p { font-size: 15px; color: var(--gray-600); line-height: 1.6; }
+
+    /* ---- FOOTER ---- */
+    footer {
+      border-top: 1px solid var(--gray-100);
+      padding: 48px 24px; text-align: center;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+    .footer-links a {
+      font-size: 14px; font-weight: 500; color: var(--gray-600);
+      text-decoration: none; transition: color 0.15s;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .footer-links a:hover { color: var(--black); }
+    .footer-copy { font-size: 13px; color: var(--gray-400); }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 768px) {
+      .hero { padding: 80px 20px 60px; }
+      .hero h1 { letter-spacing: -1.6px; }
+      section { padding: 60px 20px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .timeline-item { gap: 12px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+    }
+
+    /* ---- FOCUS ---- */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--focus); outline-offset: 2px;
+    }
+
+    /* ---- ANIMATION ---- */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.5s ease-out both; }
+    .fade-up:nth-child(2) { animation-delay: 0.1s; }
+    .fade-up:nth-child(3) { animation-delay: 0.2s; }
+    .fade-up:nth-child(4) { animation-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">TT</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="TaSain_Thomas_Resume.pdf" download class="nav-cta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-badge">Open to opportunities</div>
+      <h1>TaSain <span>Thomas</span></h1>
+      <p class="subtitle">
+        AI Engineer who ships production-grade LLM systems. I deploy fine-tuned VLMs and autonomous agents on Kubernetes with a focus on safety, red-teaming, and adversarial robustness.
+      </p>
+      <div class="hero-actions">
+        <a href="TaSain_Thomas_Resume.pdf" download class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
+        <a href="https://github.com/T-Thomas1" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/tasain-thomas-539867249" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-label">Projects</div>
+      <h2 class="section-title">What I've built</h2>
+      <p class="section-desc">Production systems at the intersection of AI, infrastructure, and security.</p>
+      <div class="projects-list">
+        <div class="project-card fade-up">
+          <div class="meta">VLM · LoRA · Safety · Apr 2026</div>
+          <h3>Secure AI Pipeline for BMI Estimation</h3>
+          <p>Fine-tuned a 7B Vision-Language Model via LoRA, compressing trainable parameters to 35M (0.5%) while achieving 89% accuracy with 95% lower inference costs.</p>
+          <ul class="highlights">
+            <li>Privacy by design: face blurring, synthetic data (BEDLAM), and LLM-as-Judge evaluations</li>
+            <li>Reduced hallucination & refusal rates by 40% via custom refusal mechanisms</li>
+            <li>Integrated Chain-of-Thought reasoning with zero-trust input validation, exceeding HarmBench safety benchmarks</li>
+          </ul>
+        </div>
+        <div class="project-card fade-up">
+          <div class="meta">Kubernetes · GPU · MLOps · Mar 2026 – Present</div>
+          <h3>MLOps & AI Agent Infrastructure</h3>
+          <p>Productionized an auto-scaling Kubernetes inference cluster with GPU passthrough on Proxmox, achieving 99.9% uptime for LLM serving.</p>
+          <ul class="highlights">
+            <li>Embedded red-team testing (Kali Linux) into CI/CD — identifying and patching prompt injection vulnerabilities pre-production</li>
+            <li>Automated lead alerts via cron-driven scripts, reducing sales response time from hours to real-time</li>
+          </ul>
+        </div>
+        <div class="project-card fade-up">
+          <div class="meta">Full-Stack · Stripe · Cloudflare · May 2024 – Present</div>
+          <h3>SaaS Booking Platform — On-Wheels Detailing CRM</h3>
+          <p>Production CRM supporting multi-location, 6-tier pricing with Stripe payments and Telegram bot integration.</p>
+          <ul class="highlights">
+            <li>Deployed on DigitalOcean with Nginx, systemd, and Cloudflare DNS/SSL/CI/CD</li>
+            <li>24/7 uptime with auto-restart policies — handled 100% of production incidents during launch</li>
+          </ul>
+        </div>
+        <div class="project-card fade-up">
+          <div class="meta">C++ · SQLite3 · Algorithms · Sep 2023 – Sep 2024</div>
+          <h3>Magna Automation — Production Line Assignment Engine</h3>
+          <p>Architected a worker-to-station matching system that reduced manual assignment time by ~40% during shift changes at a major automotive manufacturer.</p>
+          <ul class="highlights">
+            <li>Built evaluateFit() scoring algorithm balancing line familiarity, station expertise, and employee rank</li>
+            <li>Database-driven configuration enabled runtime reassignment without code changes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-label">Experience</div>
+      <h2 class="section-title">Where I've worked</h2>
+      <div class="timeline">
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="role">Registered Behavior Technician</div>
+            <div class="company">BlueMind Therapy LLC</div>
+            <div class="date">Sep 2024 – Present</div>
+            <p>Applied data-driven decision-making to adjust intervention plans daily — mirroring model drift monitoring and retraining pipelines. Maintained 100% audit-ready compliance through meticulous documentation.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="role">Industry 4.0 / Automation Intern (Rotational)</div>
+            <div class="company">Magna Electric Vehicle Structures</div>
+            <div class="date">Sep 2023 – Sep 2024</div>
+            <p>Delivered 4 automation projects on-time. Accelerated part-inspection throughput by 33% using Vuforia Model Targets for real-time CAD-to-part cross-referencing. 480-hour rotational program across 2 manufacturing roles.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="role">B.S. Computer Science</div>
+            <div class="company">Wayne State University</div>
+            <div class="date">Graduating May 2026 · GPA: 3.4/4.0</div>
+            <p>Relevant coursework: LoRA/QLoRA, RLHF/DPO/GRPO, Red Teaming, Machine Unlearning, Agentic AI Safety, Grounded VLMs, Chain-of-Thought Reasoning, HarmBench/SafeChain.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-label">Skills</div>
+      <h2 class="section-title">Technologies I work with</h2>
+      <div class="skills-grid">
+        <div class="skill-card fade-up">
+          <h3>AI & Machine Learning</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">PyTorch</span><span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Hugging Face</span><span class="skill-tag">LangChain</span>
+            <span class="skill-tag">LoRA/QLoRA</span><span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span>
+          </div>
+        </div>
+        <div class="skill-card fade-up">
+          <h3>MLOps & Cloud</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Kubernetes</span><span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS</span><span class="skill-tag">Azure</span>
+            <span class="skill-tag">DigitalOcean</span><span class="skill-tag">Nginx</span>
+            <span class="skill-tag">CI/CD</span><span class="skill-tag">Proxmox</span>
+            <span class="skill-tag">GPU Passthrough</span>
+          </div>
+        </div>
+        <div class="skill-card fade-up">
+          <h3>Security</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Prompt Injection Defense</span>
+            <span class="skill-tag">Red Teaming</span>
+            <span class="skill-tag">Zero Trust</span>
+            <span class="skill-tag">Kali Linux</span>
+            <span class="skill-tag">Wireshark</span>
+          </div>
+        </div>
+        <div class="skill-card fade-up">
+          <h3>Languages & Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span><span class="skill-tag">SQL</span>
+            <span class="skill-tag">Java</span><span class="skill-tag">C++</span>
+            <span class="skill-tag">JavaScript</span><span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MySQL</span><span class="skill-tag">Git</span>
+            <span class="skill-tag">Agile/Scrum</span><span class="skill-tag">TDD</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="TaSain_Thomas_Resume.pdf" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume PDF
+        </a>
+        <a href="https://github.com/T-Thomas1" target="_blank" rel="noopener noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/tasain-thomas-539867249" target="_blank" rel="noopener noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:tasainthomas1@gmail.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+          tasainthomas1@gmail.com
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 TaSain Thomas. Built with precision.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
