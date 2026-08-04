@@ -69,7 +69,7 @@ def make_pdf():
         y -= 16
         # Contact line
         ps(f"/{FONT} findfont 9 scalefont setfont")
-        contact = "(586) 873-0656  |  tasain@onwheelsdetailing.com  |  github.com/T-Thomas1  |  linkedin.com/in/tasain-thomas  |  tasainthomas.com"
+        contact = "(586) 873-0656  |  tasainthomas1@gmail.com  |  github.com/T-Thomas1  |  linkedin.com/in/tasain-thomas  |  tasainthomas.com"
         ps(f"({contact}) dup stringwidth pop 2 div neg {CENTER} add {y} moveto show")
 
         # pdfmark links for clickable contact items
@@ -80,7 +80,7 @@ def make_pdf():
         # Portfolio
         ps("[/Rect [378 707 435 717] /Color [0 0 1] /Action << /Subtype /URI /URI (https://tasainthomas.com) >> /Subtype /Link /ANN pdfmark")
         # Email
-        ps("[/Rect [145 707 255 717] /Color [0 0 1] /Action << /Subtype /URI /URI (mailto:tasain@onwheelsdetailing.com) >> /Subtype /Link /ANN pdfmark")
+        ps("[/Rect [145 707 255 717] /Color [0 0 1] /Action << /Subtype /URI /URI (mailto:tasainthomas1@gmail.com) >> /Subtype /Link /ANN pdfmark")
 
         gap(2)
 
