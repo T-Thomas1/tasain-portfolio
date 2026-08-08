@@ -2,15 +2,15 @@
 
     :root {
       --slate: #0f172a;
-      --slate-light: #334155;
-      --slate-muted: #64748b;
+      --slate-light: #3b82f6;
+      --slate-muted: #0f172a;
       --white: #ffffff;
-      --gray-50: #f8fafc;
-      --gray-100: #f1f5f9;
-      --gray-200: #e2e8f0;
+      --gray-50: #ffffff;
+      --gray-100: #ffffff;
+      --gray-200: #0f172a;
       --accent: #3b82f6;
       --accent-hover: #2563eb;
-      --accent-light: #eff6ff;
+      --accent-light: #ffffff;
       --section-gap: 128px;
     }
 
@@ -78,7 +78,7 @@
       letter-spacing: -1.8px; color: var(--slate);
       margin-bottom: 20px;
     }
-    .hero h1 span.name-mid { color: #64748b; }
+    .hero h1 span.name-mid { color: #0f172a; }
     .hero h1 span.name-last { color: var(--slate); }
     .hero .subtitle {
       font-size: 18px; font-weight: 400;
