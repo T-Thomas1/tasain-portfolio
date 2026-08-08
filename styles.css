@@ -78,7 +78,8 @@
       letter-spacing: -1.8px; color: var(--slate);
       margin-bottom: 20px;
     }
-    .hero h1 span { color: var(--slate); }
+    .hero h1 span.name-mid { color: #64748b; }
+    .hero h1 span.name-last { color: var(--slate); }
     .hero .subtitle {
       font-size: 18px; font-weight: 400;
       line-height: 1.7; color: var(--slate);
