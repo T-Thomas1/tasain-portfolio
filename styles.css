@@ -53,14 +53,14 @@
       text-decoration: none; transition: opacity 0.2s;
     }
     .nav-hire:hover { opacity: 0.7; }
-    .nav-cta {
+    .nav-cta-resume {
       display: inline-flex; align-items: center; gap: 6px;
-      background: var(--accent); color: #ffffff;
+      background: #f59e0b; color: #0f172a;
       padding: 8px 20px;
       font-size: 12px; font-weight: 500; text-decoration: none;
       transition: background 0.2s;
     }
-    .nav-cta:hover { background: var(--accent-hover); }
+    .nav-cta-resume:hover { background: #d97706; }
 
     /* ---- HERO ---- */
     .hero {
@@ -98,6 +98,96 @@
       margin-top: 4px;
     }
     .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* Hero Resume CTA — prominent, above metrics */
+    .hero-resume-cta {
+      display: flex; align-items: center; justify-content: center; gap: 16px;
+      margin-bottom: 40px;
+    }
+    .btn-resume-hero {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #f59e0b; color: #0f172a;
+      padding: 16px 36px;
+      font-size: 15px; font-weight: 500;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .btn-resume-hero:hover { background: #d97706; }
+    .resume-format {
+      font-family: 'Geist Mono', monospace; font-size: 11px;
+      color: var(--slate-muted);
+    }
+
+    /* Key Metrics Box */
+    .key-metrics-box {
+      max-width: 720px; margin: 0 auto 48px;
+      background: var(--gray-50); border: 1px solid var(--gray-200);
+      padding: 32px 40px;
+    }
+    .km-title {
+      font-family: 'Geist Mono', monospace; font-size: 11px; font-weight: 400;
+      text-transform: uppercase; letter-spacing: 1px;
+      color: var(--slate-muted); margin-bottom: 20px;
+    }
+    .km-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px 16px;
+    }
+    .km-item { text-align: center; }
+    .km-num {
+      font-size: 28px; font-weight: 400; letter-spacing: -0.8px;
+      color: var(--slate);
+    }
+    .km-label {
+      font-size: 11px; color: var(--slate-muted);
+      margin-top: 4px; font-family: 'Geist Mono', monospace;
+    }
+
+    /* Research Foundation (BMI project) */
+    .research-foundation {
+      margin-top: 16px; padding-top: 16px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .research-foundation h4 {
+      font-family: 'Geist Mono', monospace; font-size: 11px; font-weight: 400;
+      text-transform: uppercase; letter-spacing: 1px;
+      color: var(--slate-muted); margin-bottom: 10px;
+    }
+    .research-foundation p {
+      font-size: 13px !important; color: var(--slate-muted) !important;
+      margin-bottom: 10px !important;
+    }
+    .paper-links {
+      list-style: none; padding: 0;
+    }
+    .paper-links li {
+      margin-bottom: 4px; font-size: 13px;
+    }
+    .paper-links li a {
+      color: var(--accent); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .paper-links li a:hover { color: var(--accent-hover); }
+
+    /* Contact CTA */
+    .contact-cta {
+      text-align: center; border-top: 1px solid var(--gray-200);
+      padding: 80px 32px;
+    }
+    .cta-inner { max-width: 1265px; margin: 0 auto; }
+    .contact-cta h2 {
+      font-size: clamp(28px, 4vw, 40px); font-weight: 400;
+      letter-spacing: -0.8px; color: var(--slate); margin-bottom: 20px;
+    }
+    .cta-links {
+      display: flex; gap: 20px; justify-content: center; align-items: center;
+      flex-wrap: wrap;
+    }
+    .cta-links a {
+      font-size: 16px; font-weight: 400; color: var(--slate-muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .cta-links a:hover { color: var(--slate); }
+    .cta-sep { color: var(--gray-200); font-size: 16px; }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
       background: var(--slate); color: var(--white);
@@ -349,8 +439,9 @@
       .nav-links a { font-size: 13px; }
       .hero { padding: 80px 24px 60px; }
       .hero h1 { letter-spacing: -1.2px; }
-      .hero-metrics { gap: 24px; }
+      .km-grid { grid-template-columns: repeat(2, 1fr); }
       section { padding: var(--section-gap) 24px; }
+      .contact-cta { padding: 60px 24px; }
     }
 
     @media (max-width: 480px) {
@@ -358,6 +449,9 @@
       .hero-actions .btn-primary,
       .hero-actions .btn-accent,
       .hero-actions .btn-outline { justify-content: center; }
+      .km-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .hero-resume-cta { flex-direction: column; gap: 8px; }
+      .key-metrics-box { padding: 24px 20px; }
     }
 
     a:focus-visible, button:focus-visible {
