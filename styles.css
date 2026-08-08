@@ -119,7 +119,7 @@
 
     /* Key Metrics Box */
     .key-metrics-box {
-      max-width: 720px; margin: 0 auto 48px;
+      max-width: 1265px; margin: 0 auto 48px;
       background: var(--gray-50); border: 1px solid var(--gray-200);
       padding: 32px 40px;
     }
@@ -132,7 +132,7 @@
       display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 24px 16px;
     }
-    .km-item { text-align: center; }
+    .km-item { text-align: left; }
     .km-num {
       font-size: 28px; font-weight: 400; letter-spacing: -0.8px;
       color: var(--slate);
