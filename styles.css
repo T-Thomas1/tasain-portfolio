@@ -44,7 +44,7 @@
     }
     .nav-links { display: flex; gap: 28px; align-items: center; }
     .nav-links a {
-      font-size: 14px; font-weight: 400; color: var(--slate-muted);
+      font-size: 14px; font-weight: 400; color: var(--slate);
       text-decoration: none; transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--slate); }
@@ -78,10 +78,10 @@
       letter-spacing: -1.8px; color: var(--slate);
       margin-bottom: 20px;
     }
-    .hero h1 span { color: var(--slate-muted); }
+    .hero h1 span { color: var(--slate); }
     .hero .subtitle {
       font-size: 18px; font-weight: 400;
-      line-height: 1.7; color: var(--slate-muted);
+      line-height: 1.7; color: var(--slate);
       max-width: 640px; margin: 0 auto 48px;
     }
     .hero-metrics {
@@ -94,7 +94,7 @@
       color: var(--slate);
     }
     .hero-metric .label {
-      font-size: 12px; color: var(--slate-muted);
+      font-size: 12px; color: var(--slate);
       margin-top: 4px;
     }
     .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
@@ -114,7 +114,7 @@
     .btn-resume-hero:hover { background: #d97706; }
     .resume-format {
       font-family: 'Geist Mono', monospace; font-size: 11px;
-      color: var(--slate-muted);
+      color: var(--slate);
     }
 
     /* Key Metrics Box */
@@ -126,7 +126,7 @@
     .km-title {
       font-family: 'Geist Mono', monospace; font-size: 11px; font-weight: 400;
       text-transform: uppercase; letter-spacing: 1px;
-      color: var(--slate-muted); margin-bottom: 20px;
+      color: var(--slate); margin-bottom: 20px;
     }
     .km-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
@@ -138,7 +138,7 @@
       color: var(--slate);
     }
     .km-label {
-      font-size: 11px; color: var(--slate-muted);
+      font-size: 11px; color: var(--slate);
       margin-top: 4px; font-family: 'Geist Mono', monospace;
     }
 
@@ -150,7 +150,7 @@
     .research-foundation h4 {
       font-family: 'Geist Mono', monospace; font-size: 11px; font-weight: 400;
       text-transform: uppercase; letter-spacing: 1px;
-      color: var(--slate-muted); margin-bottom: 10px;
+      color: var(--slate); margin-bottom: 10px;
     }
     .research-foundation p {
       font-size: 13px !important; color: var(--slate) !important;
@@ -183,7 +183,7 @@
       flex-wrap: wrap;
     }
     .cta-links a {
-      font-size: 16px; font-weight: 400; color: var(--slate-muted);
+      font-size: 16px; font-weight: 400; color: var(--slate);
       text-decoration: none; transition: color 0.2s;
     }
     .cta-links a:hover { color: var(--slate); }
@@ -222,7 +222,7 @@
     .section-label {
       font-family: 'Geist Mono', monospace;
       font-size: 11px; font-weight: 400; text-transform: uppercase;
-      color: var(--slate-muted); letter-spacing: 1px; margin-bottom: 16px;
+      color: var(--slate); letter-spacing: 1px; margin-bottom: 16px;
     }
     .section-title {
       font-size: clamp(32px, 5vw, 48px);
@@ -230,7 +230,7 @@
       color: var(--slate); margin-bottom: 20px;
     }
     .section-desc {
-      font-size: 18px; font-weight: 400; color: var(--slate-muted);
+      font-size: 18px; font-weight: 400; color: var(--slate);
       max-width: 560px; line-height: 1.7;
     }
 
@@ -238,7 +238,7 @@
     .skills-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 48px; }
     .skill-category { width: 100%; margin-bottom: 12px; }
     .skill-category h3 {
-      font-size: 13px; font-weight: 400; color: var(--slate-muted);
+      font-size: 13px; font-weight: 400; color: var(--slate);
       margin-bottom: 8px;
     }
     .skill-tag {
@@ -262,7 +262,7 @@
     .project-card:hover { opacity: 0.7; }
     .project-card .meta {
       font-family: 'Geist Mono', monospace; font-size: 11px; font-weight: 400;
-      color: var(--slate-muted); text-transform: uppercase; letter-spacing: 0.5px;
+      color: var(--slate); text-transform: uppercase; letter-spacing: 0.5px;
       padding-top: 4px;
     }
     .project-card .meta span { display: block; margin-bottom: 4px; }
@@ -275,11 +275,11 @@
       color: var(--slate); margin-bottom: 10px;
     }
     .project-card .body p {
-      font-size: 15px; font-weight: 400; color: var(--slate-muted); line-height: 1.7;
+      font-size: 15px; font-weight: 400; color: var(--slate); line-height: 1.7;
       margin-bottom: 12px;
     }
     .project-card .body .highlights {
-      font-size: 14px; color: var(--slate-muted); line-height: 1.7;
+      font-size: 14px; color: var(--slate); line-height: 1.7;
     }
     .project-card .body .highlights li { margin-bottom: 4px; list-style: none; }
     .project-card .body .highlights li::before { content: '— '; color: var(--gray-200); }
@@ -297,14 +297,14 @@
       color: var(--slate); margin-bottom: 4px;
     }
     .exp-card .info .company {
-      font-size: 14px; font-weight: 400; color: var(--slate-muted); margin-bottom: 2px;
+      font-size: 14px; font-weight: 400; color: var(--slate); margin-bottom: 2px;
     }
     .exp-card .info .date {
       font-family: 'Geist Mono', monospace; font-size: 11px;
-      color: var(--slate-muted); text-transform: uppercase; letter-spacing: 0.5px;
+      color: var(--slate); text-transform: uppercase; letter-spacing: 0.5px;
       margin-bottom: 8px;
     }
-    .exp-card .info p { font-size: 14px; font-weight: 400; color: var(--slate-muted); line-height: 1.7; }
+    .exp-card .info p { font-size: 14px; font-weight: 400; color: var(--slate); line-height: 1.7; }
 
     /* ---- EDUCATION ---- */
     .edu-card {
@@ -319,14 +319,14 @@
       color: var(--slate); margin-bottom: 4px;
     }
     .edu-card .info .school {
-      font-size: 15px; font-weight: 400; color: var(--slate-muted); margin-bottom: 4px;
+      font-size: 15px; font-weight: 400; color: var(--slate); margin-bottom: 4px;
     }
     .edu-card .info .date {
       font-family: 'Geist Mono', monospace; font-size: 11px;
-      color: var(--slate-muted); text-transform: uppercase; letter-spacing: 0.5px;
+      color: var(--slate); text-transform: uppercase; letter-spacing: 0.5px;
       margin-bottom: 8px;
     }
-    .edu-card .info p { font-size: 14px; font-weight: 400; color: var(--slate-muted); line-height: 1.7; }
+    .edu-card .info p { font-size: 14px; font-weight: 400; color: var(--slate); line-height: 1.7; }
 
     /* ---- CONTACT ---- */
     .contact-grid {
@@ -367,7 +367,7 @@
       flex-shrink: 0;
     }
     .contact-channel .ch-label {
-      font-size: 14px; font-weight: 400; color: var(--slate-muted);
+      font-size: 14px; font-weight: 400; color: var(--slate);
       transition: color 0.2s;
     }
     .contact-channel .ch-value {
@@ -380,7 +380,7 @@
     .availability .av-title {
       font-family: 'Geist Mono', monospace; font-size: 11px; font-weight: 400;
       text-transform: uppercase; letter-spacing: 1px;
-      color: var(--slate-muted); margin-bottom: 8px;
+      color: var(--slate); margin-bottom: 8px;
     }
     .availability .av-text {
       font-size: 14px; font-weight: 400; color: var(--slate); line-height: 1.7;
@@ -402,15 +402,15 @@
       color: var(--slate); margin-bottom: 2px;
     }
     .hire-card .info .co {
-      font-size: 13px; font-weight: 400; color: var(--slate-muted);
+      font-size: 13px; font-weight: 400; color: var(--slate);
       margin-bottom: 4px;
     }
     .hire-card .info .dur {
       font-family: 'Geist Mono', monospace; font-size: 11px;
-      color: var(--slate-muted); text-transform: uppercase; letter-spacing: 0.5px;
+      color: var(--slate); text-transform: uppercase; letter-spacing: 0.5px;
       margin-bottom: 6px;
     }
-    .hire-card .info p { font-size: 13px; font-weight: 400; color: var(--slate-muted); line-height: 1.6; }
+    .hire-card .info p { font-size: 13px; font-weight: 400; color: var(--slate); line-height: 1.6; }
 
     /* ---- FOOTER ---- */
     footer {
@@ -420,11 +420,11 @@
     .footer-inner { max-width: 1265px; margin: 0 auto; }
     .footer-links { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
     .footer-links a {
-      font-size: 13px; font-weight: 400; color: var(--slate-muted);
+      font-size: 13px; font-weight: 400; color: var(--slate);
       text-decoration: none; transition: color 0.2s;
     }
     .footer-links a:hover { color: var(--slate); }
-    .footer-copy { font-size: 13px; color: var(--slate-muted); }
+    .footer-copy { font-size: 13px; color: var(--slate); }
 
     /* ---- RESPONSIVE ---- */
     @media (max-width: 1024px) {
