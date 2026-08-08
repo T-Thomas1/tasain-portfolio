@@ -2,7 +2,7 @@
 
 AI Engineer specializing in production-grade LLM systems, MLOps, and adversarial robustness.
 
-**Live site:** [tasainthomas.com](https://tasainthomas.com) (coming soon)
+**Live site:** [tasainthomas.com](https://tasainthomas.com) 
 
 ## Tech Stack
 
