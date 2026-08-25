@@ -141,10 +141,10 @@ def make_pdf():
 
         # BMI
         y -= 2
-        title_line("ML Validation Pipeline: BMI Estimation from Images", None, "  |  Apr 2026")
-        bullet("Built secure VLM evaluation pipeline achieving 89% accuracy (MAE 1.24) via LoRA fine-tuning of 7B VLM, reducing training cost 95% vs. full fine-tuning")
-        bullet("Implemented privacy-preserving validation layers (face blurring, BEDLAM synthetic data) and LLM-as-Judge quality gates, cutting hallucination and refusal rates 40%")
-        bullet("Integrated chain-of-thought reasoning with zero-trust validation, benchmarking safety against HarmBench standards")
+        title_line("BMI Estimator with Reasoning: Conformal Prediction + GPT-as-Judge", None, "  |  Apr 2026")
+        bullet("Trained a Squeeze-and-Excitation DenseNet (SE-DenseNet121) in PyTorch on Celeb-FBI (7,208 images), achieving 2.81 BMI-point MAE (11.56% MAPE)")
+        bullet("Added split conformal prediction for calibrated uncertainty: 90% intervals with 90.4% verified coverage on held-out data")
+        bullet("Layered a GPT-4.1-Nano LLM-as-judge reasoning module that explains each estimate and flags edge cases")
         gap(0.8)
 
         # MLOps
