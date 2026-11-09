@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TaSain Valdez — AI Engineer translating published ML research into working systems with calibrated uncertainty.">
-  <meta name="author" content="TaSain Valdez">
+  <meta name="description" content="TaSain Valdez Thomas — Software Engineer (AI/ML) translating published ML research into working systems with calibrated uncertainty.">
+  <meta name="author" content="TaSain Valdez Thomas">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="TaSain Valdez — AI Engineer">
-  <meta property="og:description" content="Crafting digital excellence for AI/ML. Conformal prediction, LLM-as-judge reasoning, AI agent orchestration, full-stack.">
+  <meta property="og:title" content="TaSain Valdez Thomas — Software Engineer (AI/ML)">
+  <meta property="og:description" content="Software engineer with hands-on ML depth — conformal prediction, LLM-as-judge reasoning, and production software for real users.">
   <meta property="og:type" content="website">
-  <title>TaSain Valdez Thomas — AI Engineer</title>
+  <title>TaSain Valdez Thomas — Software Engineer (AI/ML)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
       <div class="hero-tagline">Crafting digital excellence for AI/ML</div>
       <h1>TaSain <span class="name-mid">Valdez</span> <span class="name-last">Thomas</span></h1>
       <p class="subtitle">
-        AI Engineer who translates published ML research into working systems — calibrated BMI estimation with conformal prediction, LLM-as-judge reasoning, and a self-hosted homelab for private AI inference.
+        Software engineer who builds production software and translates ML research into working systems — a C++/SQLite worker-matching engine adopted by a plant, a conformal-prediction BMI estimator, and a phishing-campaign simulator.
       </p>
       <div class="hero-metrics">
         <div class="hero-metric"><div class="num">90.4%</div><div class="label">Conformal Coverage</div></div>
@@ -92,8 +92,8 @@
             <p>Translated published BMI-estimation research (Digital Scale, Sui et al., Manichand et al., Jin et al.) into a working estimator — a Squeeze-and-Excitation DenseNet (SE-DenseNet121) in PyTorch, extended with split conformal prediction for calibrated uncertainty and a GPT-4.1-Nano reasoning layer that explains each estimate.</p>
             <ul class="highlights">
               <li>Research-to-prototype: built on peer-reviewed BMI estimation literature, extended with conformal prediction and LLM-based reasoning</li>
-              <li>Split conformal prediction for distribution-free uncertainty — 90% intervals with empirically verified 90.4% coverage</li>
-              <li>2.81 BMI-point MAE (11.56% MAPE) on Celeb-FBI, a 7,208-image real-world benchmark</li>
+              <li>Split conformal prediction for distribution-free uncertainty — 90% intervals with 90.4% empirical coverage on 620 held-out samples</li>
+              <li>2.81 BMI-point MAE (11.56% MAPE) on a 620-sample held-out test set (Celeb-FBI, 7,208 real images)</li>
               <li>GPT-4.1-Nano LLM-as-judge explains each estimate and flags edge cases in plain English</li>
             </ul>
             <div class="research-foundation">
@@ -105,6 +105,35 @@
                 <li><a href="https://arxiv.org/abs/2008.04042" target="_blank" rel="noopener noreferrer">Jin et al. — Attention Guided Deep Features for Accurate Body Mass Index Estimation</a></li>
               </ul>
             </div>
+          </div>
+        </a>
+        <a href="https://github.com/WSU-4110/PhishingSimulator" target="_blank" rel="noopener noreferrer" class="project-card fade-up">
+          <div class="meta">
+            <span>Node.js · MySQL · JWT · SMTP</span><span>Jan 2025 – May 2025</span>
+            <span class="repo-link">github.com/WSU-4110/PhishingSimulator ↗</span>
+          </div>
+          <div class="body">
+            <h3>Phishing Campaign Simulator (Security Awareness)</h3>
+            <p>Built a phishing-campaign simulator that sends templated emails over SMTP with a tracking pixel, logging open/click metrics in MySQL for security-awareness training.</p>
+            <ul class="highlights">
+              <li>JWT (jsonwebtoken) authentication with token-scoped separation of user vs admin views and least-privilege data access</li>
+              <li>Analytics pipeline built on a command design pattern, routing events to a formatting service</li>
+              <li>Vanilla HTML/CSS/JS front end on a Node.js backend</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="project-card fade-up" style="cursor:default;">
+          <div class="meta">
+            <span>Flutter · Dart · PDF · GitFlow</span><span>Jan 2026 – May 2026</span>
+          </div>
+          <div class="body">
+            <h3>Client Project — PDF Editing & File Management (Flutter)</h3>
+            <p>Capstone — Wayne State University (NDA: tech stack and role only). Team lead of a 4-person team building a Flutter collaboration app for a real client.</p>
+            <ul class="highlights">
+              <li>Personally built the PDF editor — floating toolbar (pen/pencil/eraser) layering annotations over a PDF and flattening to a single saved page, with an app-bar of undo/redo/delete/save and a text-insert command</li>
+              <li>Revised the in-app activity meter tracking user progress and time spent</li>
+              <li>Ran the team process — three weekly meetings, client communication, and a GitFlow branching/PR workflow</li>
+            </ul>
           </div>
         </a>
         <a href="#" class="project-card fade-up" style="cursor:default;">
@@ -122,7 +151,7 @@
         </a>
         <a href="https://github.com/T-Thomas1/on-wheels_detailing-crm" target="_blank" rel="noopener noreferrer" class="project-card fade-up">
           <div class="meta">
-            <span>AI Orchestration · Stripe · Telegram</span><span>May 2024 – Present</span>
+            <span>AI Orchestration · Stripe · Telegram</span><span>May 2020 – Present</span>
             <span class="repo-link">github.com/T-Thomas1/on-wheels_detailing-crm ↗</span>
           </div>
           <div class="body">
@@ -133,20 +162,6 @@
               <li>Built a Telegram agent layer delivering daily morning briefings and real-time lead alerts</li>
               <li>Automated scheduled social content curation (M/W/F) with hashtag and engagement targeting</li>
               <li>Deployed on DigitalOcean with Nginx, systemd, and Cloudflare DNS/SSL</li>
-            </ul>
-          </div>
-        </a>
-        <a href="#" class="project-card fade-up" style="cursor:default;">
-          <div class="meta">
-            <span>Flutter · Dart · PDF · GitHub Workflow</span><span>Jan 2026 – May 2026</span>
-          </div>
-          <div class="body">
-            <h3>Client Project — PDF Editing & File Management (Flutter)</h3>
-            <p>Capstone project — Wayne State University. Team lead of a 4-person team building a mobile collaboration app for a real client, layered on an existing product (flow charts, Venn diagrams, accounting tools).</p>
-            <ul class="highlights">
-              <li>Personally built the PDF file-management feature — an annotation layer that overlays text on PDFs and lets changes be saved, edited, or deleted</li>
-              <li>Ran the team process end to end — three weekly meetings, client communication, and deadline adherence</li>
-              <li>Proposed the GitHub workflow — branching, pull requests, and issue tracking</li>
             </ul>
           </div>
         </a>
@@ -164,7 +179,7 @@
             <div class="role">Industry 4.0 / Automation Intern (Rotational)</div>
             <div class="company">Magna Electric Vehicle Structures</div>
             <div class="date">Sep 2023 – Sep 2024</div>
-            <p>Built a worker-to-station assignment engine (C++/SQLite) adopted by the plant and used during real shift changes. Developed an AR-based vision-inspection system (Vuforia Model Targets + Inductive Automation Ignition). Built managerial monitoring systems with role-based authorization and audited write access.</p>
+            <p>Built a worker-to-station assignment engine (C++/SQLite) with a weighted evaluateFit() scoring function that balanced line familiarity, station expertise, and rank — adopted by the plant and used during real shift changes. Developed an AR-based vision-inspection system for a tablet that performed model-based screw-position recognition and pass/fail logging using Vuforia Model Targets, Inductive Automation Ignition, CSV data pipelines, and Python API scripts. Built managerial monitoring systems with role-based authorization and least-privilege write access, with audit logging of manager changes.</p>
           </div>
         </div>
         <div class="exp-card fade-up">
@@ -172,7 +187,7 @@
           <div class="info">
             <div class="role">Founder & AI Agent Orchestration</div>
             <div class="company">On-Wheels Detailing</div>
-            <div class="date">May 2024 – Present</div>
+            <div class="date">May 2020 – Present</div>
             <p>Founded and operate a detailing business with paying customers. Wired up Stripe end to end and orchestrated a self-hosted AI agent that designs the site, delivers daily briefings, and alerts on real-time leads.</p>
           </div>
         </div>
@@ -211,6 +226,9 @@
         <span class="skill-tag">Stripe</span><span class="skill-tag">Telegram Bot API</span>
         <span class="skill-tag">Git / GitHub Workflow</span><span class="skill-tag">Inductive Automation Ignition</span>
         <span class="skill-tag">Vuforia Model Targets</span>
+        <span class="skill-tag">Machine Learning</span><span class="skill-tag">MySQL</span>
+        <span class="skill-tag">Data Pipelines</span><span class="skill-tag">API Development</span>
+        <span class="skill-tag">Algorithms & Data Structures</span>
         <div class="skill-category"><h3>Coursework</h3></div>
         <span class="skill-tag">LoRA / QLoRA</span><span class="skill-tag">RLHF / DPO / GRPO</span>
         <span class="skill-tag">Red Teaming</span><span class="skill-tag">Machine Unlearning</span>
@@ -234,13 +252,13 @@
         </form>
         <div class="fade-up">
           <div class="contact-channels">
-            <a href="mailto:tasain@onwheelsdetailing.com" class="contact-channel">
+            <a href="mailto:tasainthomas1@gmail.com" class="contact-channel">
               <div class="ch-icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--slate)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
               </div>
               <div>
                 <div class="ch-label">Email</div>
-                <div class="ch-value">tasain@onwheelsdetailing</div>
+                <div class="ch-value">tasainthomas1@gmail.com</div>
               </div>
             </a>
             <a href="https://github.com/T-Thomas1" target="_blank" rel="noopener noreferrer" class="contact-channel">
@@ -286,7 +304,7 @@
             <h3>Industry 4.0 / Automation Intern (Rotational)</h3>
             <div class="co">Magna Electric Vehicle Structures</div>
             <div class="dur">Sep 2023 – Sep 2024</div>
-            <p>Worker-to-station assignment engine adopted by the plant; AR vision-inspection system; monitoring dashboards with role-based access.</p>
+            <p>Worker-to-station assignment engine (weighted evaluateFit() scoring) adopted by the plant; AR vision-inspection system (Vuforia Model Targets, Inductive Automation Ignition); monitoring dashboards with role-based, least-privilege access.</p>
           </div>
         </div>
         <div class="hire-card fade-up">
@@ -294,7 +312,7 @@
           <div class="info">
             <h3>Founder & AI Agent Orchestration</h3>
             <div class="co">On-Wheels Detailing</div>
-            <div class="dur">May 2024 – Present</div>
+            <div class="dur">May 2020 – Present</div>
             <p>Real detailing business with paying customers. Stripe payments, a self-hosted AI agent, and a Telegram layer for briefings and lead alerts.</p>
           </div>
         </div>
@@ -319,7 +337,7 @@
           <span class="cta-sep">|</span>
           <a href="https://github.com/T-Thomas1" target="_blank" rel="noopener noreferrer">GitHub</a>
           <span class="cta-sep">|</span>
-          <a href="mailto:tasain@onwheelsdetailing.com">Email</a>
+          <a href="mailto:tasainthomas1@gmail.com">Email</a>
         </div>
       </div>
     </section>
@@ -331,7 +349,7 @@
         <a href="TaSain_Thomas_Resume.pdf" download>Resume PDF</a>
         <a href="https://github.com/T-Thomas1" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/tasain-thomas-539867249" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:tasain@onwheelsdetailing.com">Email</a>
+        <a href="mailto:tasainthomas1@gmail.com">Email</a>
       </div>
       <p class="footer-copy">&copy; 2026 SAIN-API. Crafting digital excellence for AI/ML.</p>
     </div>
